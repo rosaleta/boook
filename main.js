@@ -19,3 +19,4 @@ constructor(table){
 
 		return el;
 	}
+//good
