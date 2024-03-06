@@ -20,3 +20,13 @@ constructor(table){
 		return el;
 	}
 //good
+	if(this.table.options.footerElement){
+
+			switch(typeof this.table.options.footerElement){
+				case "string":
+					if(this.table.options.footerElement[0] === "<"){
+						this.containerElement.innerHTML = this.table.options.footerElement;
+					}else{
+						this.external = true;
+						this.containerElement = document.querySelector(this.table.options.footerElement);
+					}
